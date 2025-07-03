@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import GiveFeedback from './components/GiveFeedback';
+import ViewReviews from './components/ViewReviews';
 import './App.css';
 
 function App() {
+  const [reviews, setReviews] = useState([]);
+
+  const addReview = (review) => {
+    setReviews((prev) => [...prev, review]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="nav">
+        <Link to="/">Give Feedback</Link>
+        <Link to="/reviews">View Reviews</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<GiveFeedback addReview={addReview} />} />
+        <Route path="/reviews" element={<ViewReviews reviews={reviews} />} />
+      </Routes>
+    </Router>
   );
 }
 
