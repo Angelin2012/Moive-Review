@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Moive-Review/static/css/main.1dcf3967.css",
+    "main.js": "/Moive-Review/static/js/main.9cdbfd9c.js",
+    "static/js/453.24c1039e.chunk.js": "/Moive-Review/static/js/453.24c1039e.chunk.js",
+    "index.html": "/Moive-Review/index.html",
+    "main.1dcf3967.css.map": "/Moive-Review/static/css/main.1dcf3967.css.map",
+    "main.9cdbfd9c.js.map": "/Moive-Review/static/js/main.9cdbfd9c.js.map",
+    "453.24c1039e.chunk.js.map": "/Moive-Review/static/js/453.24c1039e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1dcf3967.css",
+    "static/js/main.9cdbfd9c.js"
+  ]
+}
